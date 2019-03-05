@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"net"
-	"strconv"
 )
 
 var strAddrServer = flag.String("a", "0.0.0.0:9527", "当前节点的地址和端口")
@@ -30,11 +29,16 @@ LOOP:
 		case "list":
 			cmdList()
 		case "login":
-			cmdLogin(arg1)
+			cmdSend(arg1, "login")
 		case "send":
-			num, err := strconv.Atoi(arg1)
-			checkErr(err)
-			cmdSend(num, arg2)
+			// num, err := strconv.Atoi(arg1)
+			// var strAddrClient string
+			// if err != nil {
+			//	strAddrClient = listStrAddrClient[num]
+			//} else {
+			//	strAddrClient := arg1
+			//}
+			cmdSend(arg1, arg2)
 		case "exit":
 			break LOOP
 		default:
@@ -43,15 +47,7 @@ LOOP:
 	}
 }
 
-func cmdLogin(strAddrHost string) {
-	addrClient, err := net.ResolveUDPAddr("udp", strAddrHost)
-	checkErr(err)
-	_, err = connServer.WriteToUDP([]byte("login"), addrClient)
-	checkErr(err)
-}
-
-func cmdSend(idxAddrClient int, content string) {
-	strAddrClient := listStrAddrClient[idxAddrClient]
+func cmdSend(strAddrClient, content string) {
 	addrClient, err := net.ResolveUDPAddr("udp", strAddrClient)
 	checkErr(err)
 	_, err = connServer.WriteToUDP([]byte(content), addrClient)
@@ -69,6 +65,7 @@ func server() {
 	checkErr(err)
 	connServer, err = net.ListenUDP("udp", addr)
 	defer connServer.Close()
+	fmt.Println("node is started...")
 	data := make([]byte, 1024)
 	for {
 		n, addrClient, err := connServer.ReadFromUDP(data)
