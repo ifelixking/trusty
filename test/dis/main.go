@@ -53,6 +53,8 @@ var addrBootstrap = flag.String("b", "", "address of bootstrap")
 
 func main() {
 
+	flag.Parse()
+
 	ctx := context.Background()
 
 	// 构造地址
