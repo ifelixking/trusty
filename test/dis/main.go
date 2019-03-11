@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"context"
+	"flag"
 	"fmt"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-discovery"
@@ -46,15 +47,17 @@ func handleStream(stream inet.Stream) {
 	// 'stream' will stay open until you close it (or the other side closes it).
 }
 
-func main() {
+var isFirst = flag.Bool("f", false, "is first node")
+var port = flag.String("p", "9527", "port")
+var addrBootstrap = flag.String("b", "", "address of bootstrap")
 
-	isFirst := len(os.Args) == 2
+func main() {
 
 	ctx := context.Background()
 
 	// 构造地址
 	var listenAddresses addrList
-	err := listenAddresses.Set("/ip4/0.0.0.0/tcp/"+os.Args[1])
+	err := listenAddresses.Set("/ip4/0.0.0.0/tcp/"+*port)
 	check(err)
 
 	// 创建 host
@@ -73,10 +76,10 @@ func main() {
 	}
 	fmt.Println("Bootstrap...")
 
-	if !isFirst {
+	if !*isFirst {
 
 		fmt.Println("连接 Bootstrap Peers")
-		ma, err := multiaddr.NewMultiaddr("/ip4/10.1.165.105/tcp/6666/ipfs/"+os.Args[2])
+		ma, err := multiaddr.NewMultiaddr(*addrBootstrap)
 		check(err)
 		peerinfo, _ := peerstore.InfoFromP2pAddr(ma)
 		if err := host.Connect(ctx, *peerinfo); err != nil {
@@ -128,9 +131,7 @@ func readData(rw *bufio.ReadWriter) {
 			return
 		}
 		if str != "\n" {
-			// Green console colour: 	\x1b[32m
-			// Reset console colour: 	\x1b[0m
-			fmt.Printf("\x1b[32m%s\x1b[0m> ", str)
+			fmt.Printf(str)
 		}
 
 	}
