@@ -1,10 +1,9 @@
 package main
 
 import (
-	"./lib"
-	"fmt"
+	_ "github.com/libp2p/go-libp2p"
 )
 
 func main() {
-	fmt.Println(lib.GetInfo())
+
 }

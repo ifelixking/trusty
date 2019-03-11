@@ -3,5 +3,5 @@
 package lib
 
 func GetInfo() string {
-	return "kkk"
+	return "linux"
 }
