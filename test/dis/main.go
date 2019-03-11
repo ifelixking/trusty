@@ -65,21 +65,24 @@ func main() {
 	// 创建 host
 	host, err := libp2p.New(ctx, libp2p.ListenAddrs(listenAddresses...))
 	check(err)
-	fmt.Println(host.Addrs())			// 地址
-	fmt.Println(host.ID().Pretty())		// ID
+	fmt.Println("可用地址:")
+	for _,addr := range host.Addrs(){
+		fmt.Printf("%s/ipfs/%s\r\n", addr, host.ID().Pretty())
+	}
 	host.SetStreamHandler(protocol.ID("/ids/0.0.1"), handleStream)
 
-	// 创建 dht client
+	fmt.Println("创建 DHT client...")
 	kademliaDHT, err := libp2pdht.New(ctx, host)
+	if err != nil {
+		panic(err)
+	}
 
-	// 启动 dht client
+	fmt.Println("启动 DHT client...")
 	if err = kademliaDHT.Bootstrap(ctx); err != nil {
 		panic(err)
 	}
-	fmt.Println("Bootstrap...")
 
 	if !*isFirst {
-
 		fmt.Println("连接 Bootstrap Peers")
 		ma, err := multiaddr.NewMultiaddr(*addrBootstrap)
 		check(err)
@@ -87,7 +90,7 @@ func main() {
 		if err := host.Connect(ctx, *peerinfo); err != nil {
 			fmt.Println(err)
 		} else {
-			fmt.Println("Connection established with bootstrap node:", *peerinfo)
+			fmt.Println("成功连接到Bootstrap Peers:", *peerinfo)
 		}
 
 		fmt.Println("宣告自己")
@@ -110,7 +113,6 @@ func main() {
 				continue
 			} else {
 				rw := bufio.NewReadWriter(bufio.NewReader(stream), bufio.NewWriter(stream))
-
 				go writeData(rw)
 				go readData(rw)
 			}
