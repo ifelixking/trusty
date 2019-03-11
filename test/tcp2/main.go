@@ -19,7 +19,9 @@ LOOP:
 		fmt.Scanln(&cmd, &arg1, &arg2, &arg3)
 		switch cmd {
 		case "server":
-			cmdServer(arg1)
+			cmdServer(arg1, false)
+		case "serveronce":
+			cmdServer(arg1, true)
 		case "send":
 			cmdSend(arg1, arg2, arg3)
 		case "exit":
@@ -30,7 +32,7 @@ LOOP:
 	}
 }
 
-func cmdServer(port string) {
+func cmdServer(port string, once bool) {
 	go func() {
 
 		listener, err := listenConfig.Listen(context.TODO(), "tcp", "0.0.0.0:"+port)
@@ -40,6 +42,8 @@ func cmdServer(port string) {
 		}
 		defer listener.Close()
 
+		fmt.Println("server is started...")
+
 		data := make([]byte, 1024)
 		for {
 			conn, err := listener.Accept()
@@ -47,7 +51,9 @@ func cmdServer(port string) {
 				fmt.Println(err)
 				return
 			}
-			fmt.Println(conn.RemoteAddr().String())
+			addrRemote := conn.RemoteAddr().String()
+			addrLocal := conn.LocalAddr().String()
+			fmt.Println("coming remote: ", addrRemote, " local: ", addrLocal)
 
 			n, err := conn.Read(data)
 			if err != nil {
@@ -56,14 +62,27 @@ func cmdServer(port string) {
 				fmt.Println(string(data[:n]))
 			}
 
+			n, err = conn.Write([]byte("welcome"))
+			checkErr(err)
+			fmt.Println("sent welcome...")
+
 			conn.Close()
+
+			if once {
+				break
+			}
+
+			// fmt.Println("send back...")
+			// cmdSend(port, addrRemote, "welcome")
 		}
+
+		fmt.Println("server is exit...")
 
 	}()
 }
 
-func cmdSend(portLocal, addrRemote, content string) {
-	addrLocal, err := net.ResolveTCPAddr("tcp", "0.0.0.0:"+portLocal)
+func cmdSend(strAddrLocal, strAddrRemote, content string) {
+	addrLocal, err := net.ResolveTCPAddr("tcp", strAddrLocal)
 	checkErr(err)
 
 	dialer := net.Dialer{
@@ -71,7 +90,7 @@ func cmdSend(portLocal, addrRemote, content string) {
 		LocalAddr: addrLocal,
 	}
 
-	conn, err := dialer.Dial("tcp", addrRemote)
+	conn, err := dialer.Dial("tcp", strAddrRemote)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -80,6 +99,15 @@ func cmdSend(portLocal, addrRemote, content string) {
 
 	_, err = conn.Write([]byte(content))
 	checkErr(err)
+	fmt.Println("msg is sent, and wait for welcome...")
+
+	data := make([]byte, 1024)
+	n, err := conn.Read(data)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(string(data[:n]))
+	}
 }
 
 func checkErr(err error) {
