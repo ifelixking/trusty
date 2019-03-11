@@ -104,7 +104,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	logger.Info("Host created. We are:", host.ID())
+	logger.Info("Host created. We are:", host.ID().Pretty())
 	logger.Info(host.Addrs())
 
 	// Set a function as stream handler. This function is called when a peer
