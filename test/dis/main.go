@@ -59,7 +59,7 @@ func main() {
 
 	// 构造地址
 	var listenAddresses addrList
-	err := listenAddresses.Set("/ip4/127.0.0.1/tcp/"+*port)
+	err := listenAddresses.Set("/ip4/0.0.0.0/tcp/"+*port)
 	if err != nil {
 		panic(err)
 	}
