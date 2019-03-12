@@ -59,12 +59,16 @@ func main() {
 
 	// 构造地址
 	var listenAddresses addrList
-	err := listenAddresses.Set("/ip4/0.0.0.0/tcp/"+*port)
-	check(err)
+	err := listenAddresses.Set("/ip4/127.0.0.1/tcp/"+*port)
+	if err != nil {
+		panic(err)
+	}
 
 	// 创建 host
 	host, err := libp2p.New(ctx, libp2p.ListenAddrs(listenAddresses...))
-	check(err)
+	if err != nil {
+		panic(err)
+	}
 	fmt.Println("可用地址:")
 	for _,addr := range host.Addrs(){
 		fmt.Printf("%s/ipfs/%s\r\n", addr, host.ID().Pretty())

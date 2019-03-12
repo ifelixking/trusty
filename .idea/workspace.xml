@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="196d58f8-5b5d-4531-8a74-45cfcda77b1b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/dis/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/dis/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,29 +17,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/dis/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="114" column="91" selection-start-line="114" selection-start-column="91" selection-end-line="114" selection-end-column="91" />
+            <state relative-caret-position="391">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#14#358#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Go/src/flag/flag.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16014">
-              <caret line="952" column="34" selection-start-line="952" selection-start-column="34" selection-end-line="952" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/go.mod">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -92,10 +75,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="249" />
-    <option name="width" value="1270" />
-    <option name="height" value="1440" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="400" />
+    <option name="width" value="1353" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -105,6 +88,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="trusty" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,24 +113,18 @@
             </path>
             <path>
               <item name="trusty" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trusty" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="dis" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="trusty" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;trusty&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
             <path>
-              <item name="trusty" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="trusty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;trusty&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -153,7 +141,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="D:/Go/bin/go.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../go/pkg/mod/github.com/libp2p/go-libp2p-swarm@v0.0.1/swarm_listen.go" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -177,6 +165,18 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="trusty" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <parameters value="-f" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/test/dis/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -187,16 +187,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="710" y="8" width="1270" height="1440" extended-state="0" />
+    <frame x="400" y="0" width="1353" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20082645" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2405259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28425533" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28331584" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32887974" />
@@ -204,7 +204,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32948583" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016529" side_tool="true" weight="0.38723403" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4983471" visible="true" weight="0.38638103" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4983471" visible="true" weight="0.386149" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -214,15 +214,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>a.String()</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Programs/Go/src/syscall/types_windows.go" />
-    <entry file="file://C:/Programs/Go/src/builtin/builtin.go" />
-    <entry file="file://C:/Programs/Go/src/strings/strings.go" />
-    <entry file="file://C:/Programs/Go/src/net/net.go" />
-    <entry file="file://C:/Programs/Go/src/time/time.go" />
     <entry file="file://C:/Programs/Go/src/net/tcpsock.go" />
     <entry file="file://C:/Programs/Go/src/net/dial.go" />
     <entry file="file://$PROJECT_DIR$/test/main.go">
@@ -246,20 +247,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Go/src/net/net.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Go/src/fmt/print.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="262" column="5" selection-start-line="262" selection-start-column="5" selection-end-line="262" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Go/src/net/net.go" />
+    <entry file="file://D:/Go/src/fmt/print.go" />
     <entry file="file://$PROJECT_DIR$/test/tcp/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
@@ -281,13 +270,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Go/src/net/dial.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="589" column="24" selection-start-line="589" selection-start-column="24" selection-end-line="589" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Go/src/net/dial.go" />
     <entry file="file://$PROJECT_DIR$/test/udp/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -302,13 +285,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Go/src/net/tcpsock.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Go/src/net/tcpsock.go" />
     <entry file="file://$PROJECT_DIR$/main" />
     <entry file="file://$PROJECT_DIR$/test/multicast/main.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -330,20 +307,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Go/src/bufio/bufio.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1009">
-          <caret line="368" column="50" selection-start-line="368" selection-start-column="42" selection-end-line="368" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Go/src/net/udpsock.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1009">
-          <caret line="259" column="10" selection-start-line="259" selection-start-column="10" selection-end-line="259" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Go/src/bufio/bufio.go" />
+    <entry file="file://D:/Go/src/net/udpsock.go" />
     <entry file="file://$PROJECT_DIR$/test/libp2p/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -351,23 +316,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/go/src/github.com/libp2p/go-libp2p-host/host.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/src/github.com/libp2p/go-libp2p/libp2p.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="29" column="75" lean-forward="true" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-          <folding>
-            <element signature="e#16#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/go/src/github.com/libp2p/go-libp2p-host/host.go" />
+    <entry file="file://$USER_HOME$/go/src/github.com/libp2p/go-libp2p/libp2p.go" />
     <entry file="file://$PROJECT_DIR$/test/libp2p/echo.go">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -398,20 +348,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v4.4.12+incompatible/dht_bootstrap.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v4.4.12+incompatible/dht.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v4.4.12+incompatible/dht_bootstrap.go" />
+    <entry file="file://$USER_HOME$/go/pkg/mod/github.com/libp2p/go-libp2p-kad-dht@v4.4.12+incompatible/dht.go" />
     <entry file="file://$PROJECT_DIR$/test/libp2p/flags.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
@@ -429,27 +367,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/dis/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="114" column="91" selection-start-line="114" selection-start-column="91" selection-end-line="114" selection-end-column="91" />
-          <folding>
-            <element signature="e#14#358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Go/src/flag/flag.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16014">
-          <caret line="952" column="34" selection-start-line="952" selection-start-column="34" selection-end-line="952" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Go/src/flag/flag.go" />
     <entry file="file://$PROJECT_DIR$/go.mod">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p-peerstore/peerinfo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p-discovery/routing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p-protocol/protocol.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p-host/host.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p/options.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Programs/Go/src/fmt/print.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="273" column="5" selection-start-line="273" selection-start-column="5" selection-end-line="273" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Programs/Go/src/flag/flag.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="291" selection-start-line="291" selection-end-line="292" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/multiformats/go-multiaddr/interface.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Programs/Go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="699" column="51" lean-forward="true" selection-start-line="699" selection-start-column="51" selection-end-line="699" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Programs/Go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Programs/Go/src/runtime/signal_windows.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="218" column="27" lean-forward="true" selection-start-line="218" selection-start-column="27" selection-end-line="218" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/libp2p/go-libp2p/libp2p.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/pkg/mod/github.com/libp2p/go-libp2p-swarm@v0.0.1/swarm_listen.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/pkg/mod/github.com/libp2p/go-libp2p-circuit@v0.0.1/transport.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/pkg/mod/github.com/libp2p/go-libp2p-transport-upgrader@v0.0.1/upgrader.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Programs/Go/src/context/context.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/pkg/mod/github.com/libp2p/go-libp2p-circuit@v0.0.1/listen.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../go/src/github.com/multiformats/go-multiaddr/multiaddr.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="38" lean-forward="true" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/dis/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#14#358#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
